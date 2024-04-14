@@ -46,7 +46,7 @@ while True:
         messages = client.beta.threads.messages.list(
             thread_id=thread.id
         )
-        st.write(messages)
+        st.write(messages.data[1].content[0].text.value)
         break
     else:
         st.write("Run is in progress - Please Wait")
